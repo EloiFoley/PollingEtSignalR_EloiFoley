@@ -22,6 +22,8 @@ namespace labo.signalr.api.Hubs
             await Clients.Caller.SendAsync("TaskList", _context.UselessTasks.ToListAsync());
         }
 
+
+
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             base.OnDisconnectedAsync(exception);
